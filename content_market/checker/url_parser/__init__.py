@@ -12,17 +12,29 @@ from content_market.checker.url_parser.utils import parse_url
 from content_market.checker.url_parser.qidian import parse_qidian
 from content_market.checker.url_parser.jjwx import parse_jjwx
 from content_market.checker.url_parser.shangshu import parse_shangshu
+from content_market.checker.url_parser.hongxiu import parse_hongxiu
+from content_market.checker.url_parser.xxsy import parse_xxsy
+from content_market.checker.url_parser.lieshu import parse_lieshu
+from content_market.checker.url_parser.biquge import parse_biquge
 
 parse_dict = {
-    'www.jjwxc.net': parse_jjwx,
+    # 'www.jjwxc.net': parse_jjwx,
     'book.qidian.com': parse_qidian,
-    'www.shangshu.cc': parse_shangshu
+    'www.shangshu.cc': parse_shangshu,
+    'www.hongxiu.com': parse_hongxiu,
+    'www.xxsy.net': parse_xxsy,
+    'www.lieshu.cc': parse_lieshu,
+    'www.biquge5200.com': parse_biquge
 }
 
 source_dict = {
     '.qidian.': 1,
-    '.jjwxc.': 7,
-    '.shangshu.': 15
+    # '.jjwxc.': 7,
+    '.shangshu.': 15,
+    '.hongxiu.': 5,
+    '.xxsy.': 6,
+    '.lieshu.': 16,
+    '.biquge5200.': 17
 }
 
 

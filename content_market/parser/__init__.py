@@ -7,13 +7,26 @@ author @heyao
 
 from content_market.parser.qidian import Qidian
 from content_market.parser.shangshu import Shangshu
+from content_market.parser.hongxiu import Hongxiu
+from content_market.parser.xxsy import Xxsy
+from content_market.parser.lieshu import Lieshu
+from content_market.parser.biquge import Biquge
 
 qidian = Qidian(__name__, 'DEBUG')
 shangshu = Shangshu(__name__, 'DEBUG')
+hongxiu = Hongxiu(__name__, 'DEBUG')
+xxsy = Xxsy(__name__, 'DEBUG')
+lieshu = Lieshu(__name__, 'DEBUG')
+biquge = Biquge(__name__, 'DEBUG')
+
 
 parser_dict = dict(
     Qidian=qidian,
-    Shangshu=shangshu
+    Shangshu=shangshu,
+    Hongxiu=hongxiu,
+    Xxsy=xxsy,
+    Lieshu=lieshu,
+    Biquge=biquge
 )
 
 

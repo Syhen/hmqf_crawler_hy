@@ -96,6 +96,7 @@ class BookChapterMonitor(WarmMonitor):
                                   % (extra_info['source'], extra_info['book_id'], chapter['chapter_ordinal'], chapter))
                 chapter.pop('added_at')
                 chapter_request_data = data['config']
+                self.logger.debug(chapter_request_data)
                 chapter_request_data = {k: inject(chapter_request_data[k], **chapter) for k in chapter_request_data}
                 if chapter_request_data:
                     chapter_request_data['url_type'] = 'content'
