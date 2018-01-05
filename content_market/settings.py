@@ -35,10 +35,3 @@ class ProductionConfig(Config):
 class TestConfig(Config):
     pass
 
-
-config = dict(
-    default=DevelopmentConfig,
-    development=DevelopmentConfig,
-    production=ProductionConfig,
-    testing=TestConfig
-)
