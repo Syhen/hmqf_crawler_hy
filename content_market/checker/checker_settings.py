@@ -62,7 +62,7 @@ hosts_config = [
         'data_url': '{url}',
         'formdata': None,
         'headers': None,
-        'status': 0,
+        'status': 1,
         'parser': 'Xxsy',
         'parse_func': 'parse_detail'
     },

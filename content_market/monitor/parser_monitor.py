@@ -95,7 +95,7 @@ class BookChapterMonitor(WarmMonitor):
                 self.logger.debug('successful parse chapter for source %s, book %s, chapter %s\n %s'
                                   % (extra_info['source'], extra_info['book_id'], chapter['chapter_ordinal'], chapter))
                 chapter.pop('added_at')
-                chapter_request_data = data['config']
+                chapter_request_data = config['content_config']
                 self.logger.debug(chapter_request_data)
                 chapter_request_data = {k: inject(chapter_request_data[k], **chapter) for k in chapter_request_data}
                 if chapter_request_data:
