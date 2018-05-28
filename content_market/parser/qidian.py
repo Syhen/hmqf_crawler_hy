@@ -37,7 +37,7 @@ class Qidian(BaseParser):
         item['url'] = url
         word_count = sel.xpath('//div[@class="book-information cf"]/div[@class="book-info "]/p[3]/em[1]/text()')[0]
         site = sel.xpath('//div[@class="book-information cf"]/div[@class="book-info "]/p[3]/cite[1]/text()')[0]
-        item['word_count'] = int(self.transform_word_count(word_count, site))
+        item['word_count'] = 0  #int(self.transform_word_count(word_count, site))
         item['author'] = sel.xpath('//div[@class="book-information cf"]/div[2]/h1/span/a/text()')[0]
         item['category'] = sel.xpath('//div[@class="book-information cf"]/div[2]/p[1]/a[1]/text()')[0]
         item['sub_category'] = sel.xpath('//div[@class="book-information cf"]/div[2]/p[1]/a[2]/text()')[0]
