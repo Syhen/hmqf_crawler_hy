@@ -35,8 +35,8 @@ class Qidian(BaseParser):
         item['folder_url'] = urljoin(url, sel.xpath('//div[@class="book-information cf"]/div[1]/a/img/@src')[0]).strip()
         item['title'] = sel.xpath('//div[@class="book-information cf"]/div[2]/h1/em/text()')[0]
         item['url'] = url
-        word_count = sel.xpath('//div[@class="book-information cf"]/div[@class="book-info "]/p[3]/em[1]/text()')[0]
-        site = sel.xpath('//div[@class="book-information cf"]/div[@class="book-info "]/p[3]/cite[1]/text()')[0]
+        # word_count = sel.xpath('//div[@class="book-information cf"]/div[@class="book-info "]/p[3]/em[1]/text()')[0]
+        # site = sel.xpath('//div[@class="book-information cf"]/div[@class="book-info "]/p[3]/cite[1]/text()')[0]
         item['word_count'] = 0  #int(self.transform_word_count(word_count, site))
         item['author'] = sel.xpath('//div[@class="book-information cf"]/div[2]/h1/span/a/text()')[0]
         item['category'] = sel.xpath('//div[@class="book-information cf"]/div[2]/p[1]/a[1]/text()')[0]
